@@ -1,6 +1,34 @@
 import styled from 'styled-components';
+import backgroundLogin from '../../assets/login.jpg';
 
 export const typeSecond = '"Spectral", Georgia';
+
+export const WrapperLogin = styled.section`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  gap: 2rem;
+
+  ::before {
+    display: block;
+    content: '';
+    background: url(${backgroundLogin}) no-repeat center center;
+    background-size: cover;
+  }
+
+  .forms {
+    max-width: 30rem;
+    padding: 1rem;
+  }
+
+  @media (max-width: 40rem) {
+    grid-template-columns: 1fr;
+    
+    .forms {
+      max-width: 100%;
+    }
+  }
+`;
 
 export const Section = styled.section`
   .lostPass {
