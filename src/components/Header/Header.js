@@ -8,7 +8,7 @@ import * as G from '../../styles/GlobalStyles';
 import {ReactComponent as Dogs} from '../../assets/dogs.svg';
 
 const Header = () => {
-  const { data, userLogout } = React.useContext(UserContext)
+  const { data } = React.useContext(UserContext)
 
   return (
     <G.Contanier>
@@ -18,9 +18,8 @@ const Header = () => {
             <Dogs />
           </Link>
           {data ? (
-              <Link  className="login" to="/conta">
+              <Link  className="login" to="/login">
                 {data.nome}
-                <button onClick={userLogout}>sair</button>
               </Link>
           ) : (
             <Link  className="login" to="/login">

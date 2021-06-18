@@ -11,7 +11,7 @@ import * as S from './styles';
 const Login = () => {
   const {login} = useContext(UserContext)
 
-  if(login) return <Navigate to="/conta" />
+  // if(login) return <Navigate to="/conta" />
 
   return (
     <S.WrapperLogin>
