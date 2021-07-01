@@ -87,8 +87,11 @@ export const Title = styled.h1`
     left: -5px;
     border-radius: 0.2rem;
     z-index: -1;
-
   }
+`;
+
+export const mainContanier = styled.div`
+  margin-top: 4rem;
 `;
 
 export default GlobalStyles;

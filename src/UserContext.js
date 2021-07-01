@@ -18,7 +18,7 @@ export const UserStorage = ({children}) => {
     setLogin(false);
 
     window.localStorage.removeItem('token');
-    console.log('logout');
+
     navigate('/login');
   }, [navigate])
 
@@ -28,7 +28,6 @@ export const UserStorage = ({children}) => {
     const json = await response.json();
     setData(json);
     setLogin(true)
-    console.log(json);
   }
 
   async function userLogin(username, password) {
@@ -45,7 +44,6 @@ export const UserStorage = ({children}) => {
   
       window.localStorage.setItem('token', token);
       await getUser(token);
-      console.log('doij');
       navigate('/conta');
     } catch (err) {
       setError(err.message)
