@@ -40,7 +40,7 @@ export const Photo = styled.li`
 `;
 
 export const Views = styled.span`
-  background: rgba(0, 0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
   color: #fff;
   font-size: 1rem;
   text-align: center;
@@ -56,4 +56,22 @@ export const Views = styled.span`
     display: inline-block;
     margin-right: .25rem;
     background: url(${views}) no-repeat;
+  }
+`;
+
+export const Modal = styled.div`
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  background: rgba(0, 0, 0, .4);
+  z-index: 1000;
+  padding: 2rem calc(4rem + 15px) 2rem 4rem;
+
+  @media (max-width: 40rem) {
+    padding: 2rem calc(2rem + 15px) 2rem 2rem;
+
+  }
 `;

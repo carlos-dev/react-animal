@@ -19,7 +19,7 @@ const useFetch = () => {
       if (response.ok === false) throw new Error(json.message)
     } catch (error) {
       json = null
-      setError('Email ou usuário já cadastrado');
+      setError(error.message);
     } finally {
       setData(json)
       setLoading(false);

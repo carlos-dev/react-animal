@@ -9,7 +9,7 @@ import { PHOTOS_GET } from '../api';
 
 import * as S from './styles';
 
-const FeedPhotos = () => {
+const FeedPhotos = ({setModalPhoto}) => {
   const {data, loading, error, request} = useFetch();
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const FeedPhotos = () => {
   if (data) {
     return (
       <S.Feed className="animeLeft">
-        {data.map(photo => <FeedPhotosItem key={photo.id} photo={photo} />)}
+        {data.map(photo => <FeedPhotosItem key={photo.id} photo={photo} setModalPhoto={setModalPhoto} />)}
       </S.Feed>
     );
   } else {
