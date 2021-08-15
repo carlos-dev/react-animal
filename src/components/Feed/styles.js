@@ -30,7 +30,7 @@ export const Photo = styled.li`
     }
   }
 
-  img {
+  > div {
     grid-area: 1 / 1; 
   }
   

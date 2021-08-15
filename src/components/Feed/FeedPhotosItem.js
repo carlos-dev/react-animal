@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Image from '../Helper/Image';
+
 import * as S from './styles';
 
 const FeedPhotosItem = ({photo, setModalPhoto}) => {
@@ -9,7 +11,8 @@ const FeedPhotosItem = ({photo, setModalPhoto}) => {
 
   return (
     <S.Photo onClick={handleModal}>
-      <img src={photo.src} alt={photo.title} />
+      <Image src={photo.src} alt={photo.title}/>
+
       <S.Views>{photo.acessos}</S.Views>
     </S.Photo>
   );

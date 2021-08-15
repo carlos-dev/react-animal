@@ -115,7 +115,7 @@ export const Comments = styled.ul`
 export const Form = styled.form`
   display: grid;
   grid-template-columns: 1fr auto;
-  align-items: stretch;
+  align-items: flex-end;
   margin: 1rem;
 `;
 
@@ -158,5 +158,25 @@ export const Button = styled.button`
   :focus svg g,
   :hover svg g {
     animation: ${latir} 0.6s infinite alternate;
+  }
+`;
+
+export const Delete = styled.button`
+  background: #ddd;
+  padding: .3rem .6rem;
+  line-height: 1;
+  border: 1px solid transparent;
+  font-size: .875rem;
+  font-family: ${typeFirst};
+  cursor: pointer;
+  border-radius: .4rem;
+  transition: .1s;
+
+  :focus,
+  :hover {
+    outline: none;
+    background: #fff;
+    box-shadow: 0 0 0 3px #eee;
+    border-color: #333;
   }
 `;
